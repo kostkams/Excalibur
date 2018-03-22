@@ -2,7 +2,9 @@ import {AfterViewChecked, ChangeDetectorRef, Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.css']
+
 })
 export class AppComponent implements AfterViewChecked {
 

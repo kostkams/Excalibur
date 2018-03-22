@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="ex-toolbar">
+  <button mat-icon-button (click)="snav.toggle()">
+    <mat-icon>apps</mat-icon>
+  </button>
+  <h1>Excalibur</h1>
+</mat-toolbar>
+
+<mat-sidenav-container class="ex-sidenav-container">
+  <mat-sidenav #snav style="margin-top: 56px;">
+    <mat-nav-list>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="margin-top: 65px;">
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
