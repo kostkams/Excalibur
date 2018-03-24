@@ -6,7 +6,6 @@ services:
         volumes:
           - ./logs:/usr/local/var/log/couchdb
           - ./db/data:/opt/couchdb/data
-          - ./db/settings:/opt/couchdb/etc/local.d
         ports:
             - 5984:5984
             - 4369:4369
