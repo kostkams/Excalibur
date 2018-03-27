@@ -46,3 +46,6 @@ db/data/
 db/settings/couchdb.env.docker
 logs/
 db/settings/docker.ini
+_dist/
+_db
+_logs

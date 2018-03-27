@@ -4,8 +4,8 @@ services:
         image: apache/couchdb:latest
         container_name: "couchdb"
         volumes:
-          - ./logs:/usr/local/var/log/couchdb
-          - ./db/data:/opt/couchdb/data
+          - ./_logs:/usr/local/var/log/couchdb
+          - ./_db/data:/opt/couchdb/data
         ports:
             - 5984:5984
             - 4369:4369
