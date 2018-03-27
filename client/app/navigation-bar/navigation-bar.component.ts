@@ -1,7 +1,7 @@
-import {AfterViewChecked, ChangeDetectorRef, Component} from "@angular/core";
+import {AfterViewChecked, ChangeDetectorRef, Component} from '@angular/core';
 
 @Component({
-  selector: 'navigation-bar',
+  selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
   styleUrls: ['./navigation-bar.css']
 })

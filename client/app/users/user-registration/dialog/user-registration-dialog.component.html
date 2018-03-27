@@ -1,0 +1,60 @@
+<h1 mat-dialog-title>Register new User</h1>
+<mat-dialog-content>
+  {{diagnostic}}
+  <mat-form-field
+    class="ex-full-width">
+    <input matInput
+           placeholder="Username"
+           [(ngModel)]="data.username"
+           name="username"
+           required>
+    <mat-icon matSuffix>face</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field
+    class="ex-full-width">
+    <input matInput
+           placeholder="Email"
+           [(ngModel)]="data.email"
+           name="email"
+           type="email"
+           required>
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field
+    class="ex-full-width">
+    <input matInput
+           placeholder="Password"
+           [(ngModel)]="data.password"
+           [type]="hide ? 'password' : 'text'"
+           type="password"
+           name="password"
+           required>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field
+    class="ex-full-width">
+    <input matInput
+           placeholder="Confirm Password"
+           [(ngModel)]="data.confirmPassword"
+           [type]="hide ? 'password' : 'text'"
+           type="password"
+           name="confirmPassword"
+           required>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <span class="ex-spacer"></span>
+  <button mat-button
+          mat-dialog-close>Cancel
+  </button>
+  <button mat-raised-button
+          [mat-dialog-close]="true"
+          color="primary"
+          cdkFocusInitial>Create
+  </button>
+</mat-dialog-actions>

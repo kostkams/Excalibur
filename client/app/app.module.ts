@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {MaterialModule} from "./material.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NavigationBarModule} from './navigation-bar/navigation-bar.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -15,6 +16,7 @@ export function tokenGetter() {
     AppComponent,
   ],
   imports: [
+    FormsModule,
     BrowserAnimationsModule,
     BrowserModule,
     MaterialModule,

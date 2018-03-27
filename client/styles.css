@@ -13,3 +13,9 @@ button:focus{
   padding: 5px;
 }
 
+.ex-spacer{
+  flex: 1 1 auto;
+}
+.ex-full-width {
+   width: 100%;
+ }
