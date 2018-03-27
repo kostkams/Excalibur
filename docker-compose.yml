@@ -11,4 +11,10 @@ services:
             - 4369:4369
             - 9100:9100
         env_file: db/settings/couchdb.env.docker
+    website:
+        build: .
+        volumes:
+          - .:/opt/excalibur/
+        ports:
+        - 80:3000
 
