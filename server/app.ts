@@ -3,7 +3,9 @@ import * as express from 'express';
 import * as path from 'path';
 import 'reflect-metadata';
 import { InversifyExpressServer } from 'inversify-express-utils';
-import {Container} from "inversify";
+import {ServiceLocator} from './service-locator/service-locator';
+import {DatabaseManager} from './database/database-manager';
+import TYPES from './database/types';
 
 require('require-all')(__dirname);
 
@@ -15,10 +17,15 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: false }));
 
 
-
-const container = new Container();
-const inversifyServer = new InversifyExpressServer(container, null, null, server);
+const inversifyServer = new InversifyExpressServer(ServiceLocator.Instance.Container, null, null, server);
 const app = inversifyServer.build();
 app.listen(3000);
 // const app = server;
+
+const initDb = () => {
+  ServiceLocator.Instance.Container.get<DatabaseManager>(TYPES.DatabaseManager).createDatabase('_user');
+}
+
+initDb()
+
 export { app };

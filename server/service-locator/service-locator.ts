@@ -8,14 +8,14 @@ export class ServiceLocator {
     this.container = new Container();
   }
 
-  public static GetInstance(): ServiceLocator {
+  public static get Instance(): ServiceLocator {
     if (!this.instance) {
       this.instance = new ServiceLocator();
     }
     return this.instance;
   }
 
-  public GetContainer(): Container {
+  public get Container(): Container {
     return this.container;
   }
 }

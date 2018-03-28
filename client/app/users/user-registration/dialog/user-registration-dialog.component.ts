@@ -15,8 +15,11 @@ export class UserRegistrationDialogComponent implements AfterViewChecked {
               @Inject(MAT_DIALOG_DATA) public data: UserRegistrationViewModel) {
   }
 
-  onNo() {
-    this.dialogRef.close();
+  onCreate() {
+    this.dialogRef.close({
+      data: this.data,
+      create: true
+    });
   }
 
   // This fixes: https://github.com/DavideViolante/Angular-Full-Stack/issues/105
